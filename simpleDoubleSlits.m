@@ -29,7 +29,7 @@ function simpleDoubleSlits(sep, width, height, slitleft, slitright)
     
     
     colormap('default');
-    subplot(2,2,2);
+    subplot(2,1,1);
     hold;
     imagesc(g1);
     colorbar;
@@ -45,13 +45,13 @@ function simpleDoubleSlits(sep, width, height, slitleft, slitright)
     end
     mod11=fftshift(mod1);
     colormap('default');
-    s2 = subplot(2,2,4);
+    s2 = subplot(2,1,2);
     
     hold;
     imagesc(mod11);
     colorbar;
     hold;
-    s3 = subplot(2,2,[1 3]);
-    surf(mod11);
+    %s3 = subplot(2,2,[1 3]);
+    %surf(mod11);
 end
 

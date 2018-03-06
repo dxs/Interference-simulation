@@ -1,12 +1,12 @@
 %%Define a slit
 clear
-sleft = Slit(1,10,10,400);
-sright = Slit(1,10,10,400);
+sleft = Slit(2,1000,10,400);
+sright = Slit(10,10,10,400);
 
-space = 10;
+space = 6;
 
-simpleDoubleSlits(space,50,50,sleft,sright);
+simpleDoubleSlits(space,5000,5000,sleft,sright);
 
-scenter = Slit(4,4,1,14);
+scenter = Slit(40,40,100,14);
 
-simpleSlits(50,50,scenter);
+%simpleSlits(5000,5000,scenter);
