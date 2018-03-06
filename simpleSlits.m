@@ -1,29 +1,26 @@
-function simpleDoubleSlits(sep, width, height, slitleft, slitright)
-%UNTITLED2 Summary of this function goes here
+function simpleSlits(width, height, slit)
+%UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
     middleW= width/2;
     middleH = height/2;
     
-    leftAnchorX = middleW - sep/2 - slitleft.Width;
-    leftAnchorY = middleH - slitleft.Height / 2;
-    
-    rightAnchorX = middleW + sep/2;
-    rightAnchorY = middleH - slitright.Height / 2;
+    AnchorX = middleW - slit.Width / 2;
+    AnchorY = middleH - slit.Height / 2;
     
     g1 = zeros(width,height);
     
     
     %%Left anchor set
-    for i=leftAnchorX:(leftAnchorX + slitleft.Width)
-        for j=leftAnchorY:(leftAnchorY + slitleft.Height)
-            g1(j,i) = slitleft.Intensity;
+    for i=AnchorX:(AnchorX + slit.Width)
+        for j=AnchorY:(AnchorY + slit.Height)
+            g1(j,i) = slit.Intensity;
         end
     end
     
     %%Right anchor set
-    for i=rightAnchorX:(rightAnchorX + slitright.Width)
-        for j=rightAnchorY:(rightAnchorY + slitright.Height)
-            g1(j,i) = slitright.Intensity;
+    for i=AnchorX:(AnchorX + slit.Width)
+        for j=AnchorY:(AnchorY + slit.Height)
+            g1(j,i) = slit.Intensity;
         end
     end
     
