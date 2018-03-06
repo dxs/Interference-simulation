@@ -5,16 +5,18 @@ classdef Slit
     properties
         Width
         Height
+        Intensity
         NbSpot
         Array
     end
     
     methods
-        function obj = Slit(width,height,nbspot)
+        function obj = Slit(width,height,intensity,nbspot)
            obj.Width = width;
            obj.Height = height;
+           obj.Intensity = intensity;
            obj.NbSpot = nbspot;
-           obj.Array = ones(Width,Height);
+           obj.Array = ones(obj.Width,obj.Height);
         end
     end
 end
