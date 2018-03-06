@@ -40,7 +40,7 @@ function simpleDoubleSlits(sep, width, height, slitleft, slitright)
         for i=1:width
             rv = real(gf1(i,j));
             iv=imag(gf1(i,j));
-            mod1(i,j)=(rv*rv+iv*iv);
+            mod1(i,j)=(rv*rv+iv*iv)*255;
         end
     end
     mod11=fftshift(mod1);

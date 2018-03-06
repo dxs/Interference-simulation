@@ -1,7 +1,7 @@
 %%Define a slit
 clear
 sleft = Slit(2,1000,10,400);
-sright = Slit(10,10,10,400);
+sright = Slit(2,1000,10,400);
 
 space = 6;
 
