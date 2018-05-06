@@ -25,17 +25,16 @@ classdef SphericalEmitter
             %METHOD1 Summary of this method goes here
             %   Detailed explanation goes here
             rangeX = linspace(distX1,distX2,npoints)';
-            f = @(x,k,n) x/n*sin(-k*n);
-%             r = zeros(npoints);
-%             n = zeros(npoints);
+            f = @(x,k,n) x/n*cos(k*n);
+
+            n = zeros(npoints,1);
             P = zeros(npoints,1);
             
             for i=1:npoints
                 r = [rangeX(i)-obj.PosX; distY];
-                n = norm(r);
-                P(i) =  f(obj.Xi,obj.K,n);
+                n(i) = norm(r);
+                P(i) =  f(obj.Xi,obj.K,n(i))^2;
             end
-            
         end
     end
 end
